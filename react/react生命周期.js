@@ -38,3 +38,15 @@ class TestPage extends BaseComponent {
         );
     }
 }
+
+// 1、getDefaultProps
+// 2、getInitialState
+// 3、componentWillMount
+// 4、render
+// 5、componentDidMount
+
+// 1、componentWillReceiveProps
+// 2、shouldComponentUpdate
+// 3、componentWillUpdate
+// 4、render
+// 5、componentDidUpdate

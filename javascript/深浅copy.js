@@ -6,6 +6,7 @@
 // 递归
 // Object.assign()实现，当第一个传参是{}
 // JSON.stringify()和JSON.parse()实现
+// const newArr = array.concat();
 
 function deepCopy (obj) {
     var result;
