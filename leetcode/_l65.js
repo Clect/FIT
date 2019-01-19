@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {boolean}
  */
+// 正负号有且只能有一个
 var isNumber = function(s) {
     s = s.trim();
     if(s == ".") return false;
