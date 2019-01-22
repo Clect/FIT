@@ -19,18 +19,20 @@ var majorityElement = function(nums) {
             if(count > len / 2) {
                 return that;
             }
-            count_ = count > count_ ? count : count_;
             val_ = count > count_ ? val : val_;
+            count_ = count > count_ ? count : count_;
         }
         else {
             if(count > len / 2) {
                 return that;
             }
-            count_ = count > count_ ? count : count_;
             val_ = count > count_ ? val : val_;
+            count_ = count > count_ ? count : count_;
             count = 0;
         }
     }
+
+    console.log(val, val_, count, count_);
 
     return val_;
 };
