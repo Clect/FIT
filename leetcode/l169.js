@@ -3,22 +3,34 @@
  * @return {number}
  */
 var majorityElement = function(nums) {
-    let temp = [];
-    let max = 0;
-    let maxId = 0;
-    nums.forEach(x => {
-        if(!temp[x]) {
-            temp[x] = 1;
+    let temp = nums.sort();
+    let val = temp[0];
+    let val_ = temp[0];
+    let count = 0;
+    let count_ = 0;
+    let len =  nums.lengthl
+
+    for(let i = 1;i < temp.length;i++) {
+        let that = temp[i];
+        let last = temp[i - 1];
+        if(that == last) {
+            count++;
+            val = that;
+            if(count > len / 2) {
+                return that;
+            }
+            count_ = count > count_ ? count : count_;
+            val_ = count > count_ ? val : val_;
         }
         else {
-            temp[x]++;
+            if(count > len / 2) {
+                return that;
+            }
+            count_ = count > count_ ? count : count_;
+            val_ = count > count_ ? val : val_;
+            count = 0;
         }
-    });
-    console.log(temp)
-    for(let i = 0;i < temp.length;i ++) {
-        let that = temp[i];
-        maxId = that ? (that > max ? i : maxId) : maxId;
-        max = that ? (that > max ? that : max) : max;
     }
-    return maxId;
+
+    return val_;
 };
