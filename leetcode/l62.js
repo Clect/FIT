@@ -1,16 +1,10 @@
 /**
+ * @param {number} m
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function (n) {
-    let isJi = n % 2;
-    let maxNum2 = Math.floor(n / 2);
-    let ret = 1;
-    for (let i = 1;i <= maxNum2;i++) {
-        let total = i + (maxNum2 - i) * 2 + isJi;
-        ret += ccc(total, i);
-    }
-    return ret;
+var uniquePaths = function(m, n) {
+    return ccc(m + n - 2, m > n ? n - 1 : m - 1)
 };
 
 // 排列组合
